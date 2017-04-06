@@ -10,7 +10,7 @@ exports.getAllCityStreetsTraffic = getAllCityStreetsTrafficFn;
 
 function getStreetTrafficFn(request,response) {
 
-    //get traffic info from request.params.id
+    //get traffic info from request.params.name
     response.status(200).send({status:"S",message:"here traffic info "});
     return;
 }
