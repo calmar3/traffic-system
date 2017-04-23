@@ -9,6 +9,4 @@ module.exports = function (app) {
 
     app.get('/street/:name', trafficCtrl.getStreetTraffic);
 
-    app.get('/streets',trafficCtrl.getAllCityStreetsTraffic);
-
 };
