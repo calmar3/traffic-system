@@ -22,6 +22,6 @@ function getStreetTrafficFn(request,response) {
     else
         traffic = 0.1;
     response.status(200).send({street:request.params.name,traffic:traffic});
+    console.log("Traffic{hour-street-%traffic}:"+ actualHour + " - " + request.params.name + " - " + traffic);
     return;
 }
-
