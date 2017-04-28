@@ -23,6 +23,6 @@ function getStreetTrafficFn(request,response) {
         traffic = 0.1;
     console.log("Hour - Traffic:"+ JSON.stringify(actualHour) + JSON.stringify(traffic));
     response.status(200).send({street:request.params.name,traffic:traffic});
+    console.log("Traffic{hour-street-%traffic}:"+ actualHour + " - " + request.params.name + " - " + traffic);
     return;
 }
-
