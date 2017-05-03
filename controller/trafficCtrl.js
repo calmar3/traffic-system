@@ -21,8 +21,9 @@ function getStreetTrafficFn(request,response) {
         traffic = hours["19-20"];
     else
         traffic = 0.1;
-    console.log("Hour - Traffic:"+ JSON.stringify(actualHour) + JSON.stringify(traffic));
+
+    console.log("Traffic { hour - street - %traffic }:"+ actualHour + " - " + request.params.name + " - " + traffic);
     response.status(200).send({street:request.params.name,traffic:traffic});
-    console.log("Traffic{hour-street-%traffic}:"+ actualHour + " - " + request.params.name + " - " + traffic);
+
     return;
 }
