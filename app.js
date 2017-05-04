@@ -1,13 +1,23 @@
-
-
+/**
+ * cloud foundry environment
+ */
 var cfenv = require('cfenv');
 var bodyParser = require('body-parser');
-
 var express = require('express');
-// create a new express server
+
+/**
+ * create new express server
+ */
 var app = express();
+
+/**
+ * parse JSON body
+ */
 app.use(bodyParser.json());
 
+/**
+ * allow cross origin
+ */
 app.use(function (req, res, next) {
     // Website you wish to allow to connect
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -32,6 +42,9 @@ app.use(function (req, res, next) {
     next();
 });
 
+/**
+ * route module for REST API
+ */
 require('./routes/route')(app);
 
 var appEnv = cfenv.getAppEnv();

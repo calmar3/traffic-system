@@ -1,5 +1,11 @@
+
 exports.getStreetTraffic = getStreetTrafficFn;
 
+/**
+ * Returns traffic percentage from the actual Hour of day
+ * @param request - HTTP request
+ * @param response - HTTP response
+ */
 function getStreetTrafficFn(request,response) {
 
     //get traffic info from request.params.name
